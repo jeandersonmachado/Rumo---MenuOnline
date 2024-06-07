@@ -1,0 +1,170 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+.text-center h1{
+    font-size: 4rem;
+    color: antiquewhite;
+    margin-top: -30px;
+}
+
+.pratos-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.pratos-container div h4 {
+    color: antiquewhite;
+    font-weight: 400;
+}
+
+.pratos-container div p {
+    color: darkgray;
+    font-weight: 400;
+}
+
+.pratos-container div div {
+    color: darkgray;
+    font-weight: 400;
+}
+.pratos-container input{
+    width: 3.75rem;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: aliceblue;
+    background-color: dimgrey
+}
+.pratos {
+    gap: 10px;
+}
+
+.title h2 {
+    font-size: 3rem;
+    color: antiquewhite;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.between {
+    background-color: darkgray;
+    height: 200px;
+    width: 1px;
+
+}
+
+.elements {
+    margin-top: 2rem;
+}
+.total {
+    gap: 8rem;
+    margin-top: 3rem;
+}
+.total div {
+    font-size: 3rem;
+    color: antiquewhite;
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.name-container{
+    margin-top: 2rem;
+}
+.name-container p{
+    color:antiquewhite;
+    font-size: 1.5rem
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1;
+}
+
+.input-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #efefef;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.input-container div {
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.input-container div input[type="number"] {
+    width: 100%;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgb(103, 103, 103);
+    background-color: #f9f9f9;
+}
+
+.input-container div input[type="text"] {
+     width: 100%;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid rgb(103, 103, 103);
+    background-color: #f9f9f9;
+}
+
+.input-container div input[type="text"]::-webkit-inner-spin-button,
+.input-container div input[type="number"]::-webkit-outer-spin-button {
+        margin: 0;
+}
+
+.input-container div input[type="text"] {
+    -moz-appearance: textfield;
+}
+.input-container div input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.input-container div span {
+    width: 100%;
+    display: block;
+}
+
+.send {
+    margin-top: 1.5rem;
+    width: 100%;
+    border: none;
+    background-color: #15151f;
+    color: white;
+    height: 40px;
+    cursor: pointer;
+}
+
+#time {
+    width: 30%;
+    height: auto;
+    background-color:darkgrey;
+}

@@ -1,0 +1,118 @@
+﻿@model IEnumerable<MenuOnline.Models.Prato>
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="input-container" id="input-container">
+        <h4>Insira seu nome e sua mesa</h4>
+        <div>
+            <label for="nome">Nome:</label>
+            <input id="input-text" type="text" name="nome" min="0">
+            <span id="nome-error"></span>
+        </div>
+        <div>
+            <label for="mesa">Mesa:</label>
+            <input id="input-number" type="number" name="mesa" min="0" max="100">
+            <span id="mesa-error"></span>
+        </div>
+        <button id="send-button" type="button" class="btn btn-primary send">Enviar</button>
+    </div>
+
+    <div class="container position-relative">
+        <div id="nome-mesa" class="position-relative top-50 start-50 translate-middle w-100 d-flex justify-content-between p-3 name-container">
+            <p class="mb-0"></p>
+            <p class="mb-0">Mesa:</p>
+        </div>
+    </div>
+
+    <div class="container-fluid custom-container">
+        <div class="text-center">
+            <h1>Menu</h1>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center pratos ">
+        <div>
+            @{
+                var pratosList = Model.ToList();
+
+                    <div class="text-center title">
+                    <h2>Pratos</h2>
+                    </div>
+
+                @for (int i = 0; i < 3; i++)
+            {
+                    <div class="elements">
+                    <div class="pratos-container">
+                        <div>
+                            <h4>@pratosList[i].Nome</h4>
+                        </div>
+                        <div class="get-price">
+                            <p>@pratosList[i].Preco.ToString("c")</p>
+                        </div>
+                    </div>
+                    <div class="pratos-container">
+                        <div>
+                            <p>@pratosList[i].Descricao</p>
+                        </div>
+                        <div>
+                            <div>Quantidade: <input class="get-quantity" type="number" min="0"/></div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    </div>
+
+            }
+            }
+        </div>
+        <div class="between"></div>
+        <div>
+            @{
+                var bebidaList = Model.ToList();
+
+                    <div class="text-center title">
+                        <h2>Bebidas</h2>
+                    </div>
+
+                    @for (int i = 3; i < 6; i++)
+                {
+                        <div class="elements">
+                        <div class="pratos-container">
+                            <div>
+                                <h4>@bebidaList[i].Nome</h4>
+                            </div>
+                            <div class="get-price">
+                                <p>@bebidaList[i].Preco.ToString("c")</p>
+                            </div>
+                        </div>
+                        <div class="pratos-container">
+                            <div>
+                                <p>@bebidaList[i].Descricao</p>
+                            </div>
+                            <div>
+                                <div>Quantidade: <input class="get-quantity" type="number" min="1" /></div>
+                            </div>
+                        </div>
+                        <div class="line"></div>
+                        </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center total">
+        <div id="total">Total: R$ 0</div>
+        <button id="comprar" type="button" class="btn btn-success">Comprar</button>
+    </div>
+    <div id="time" class="d-flex justify-content-center align-items-center flex-lg-column">
+    </div>
+    <script src="~/js/index.js"></script>
+</body>
+</html>
